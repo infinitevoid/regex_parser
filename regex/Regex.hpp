@@ -7,11 +7,13 @@ bool Match(string test, Node* tree)
     for(int i = 0; i < test.size(); i++)
     {
         step = step->Derive(test[i]);
-        cout << i << ": ";
+        //TODO remove debug
+        /*cout << i << ": ";
         channel s;
         step->Debug(s);
         cout << s.str();
         cout << endl;
+        //*/
     }
     return step->Nullable;
 }

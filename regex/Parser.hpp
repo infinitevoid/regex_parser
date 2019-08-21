@@ -46,3 +46,9 @@ Node* ParseRegex(string &regex, int &index)
     if(curr == '|'){return new Or(tree, ParseRegex(regex, index));}
     return tree;
 }
+
+Node* CreateTree(string &regex)
+{
+    int index = 0;
+    return ParseRegex(regex, index);
+}
